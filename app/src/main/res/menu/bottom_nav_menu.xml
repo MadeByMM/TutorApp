@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Hjem" />
+    <item
+        android:id="@+id/navigation_toolbox"
+        android:icon="@drawable/ic_toolbox"
+        android:title="Værktøjskassen" />
+    <item
+        android:id="@+id/navigation_terms"
+        android:icon="@drawable/ic_terms"
+        android:title="Tutorbetingelser" />
+    <item
+        android:id="@+id/navigation_bookshelf"
+        android:icon="@drawable/ic_bookshelf"
+        android:title="Bogreolen" />
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@drawable/ic_events"
+        android:title="Event Børs" />
+
+</menu>
