@@ -1,10 +1,782 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Toolbox">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Værktøjskassen"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/toolintro"
+        android:text="Formålet med værktøjskassen er at give dig, der har en rolle under tutorindsatsen, en introduktion til, hvad det vil sige at være tutorkoordinator og tutor, og hvilke arbejdsopgaver det fører med sig.\n\n
+
+Som udgangspunkt henvender værktøjskassen sig både til tutorkoordinatorer og tutorer, som har et større ansvar i forbindelse med planlægningen af studiestarten. Tanken bag værktøjskassen er, at tutorkoordinatorerne føler sig godt klædt på til at træde ind i rollen samt at klæde deres medtutorer på til at varetage rollen som tutor.\n\n
+
+Værktøjskassen skal ses som et opslagsværk for både tutorkoordinatorer og tutorer. Befinder du dig derfor i en situation, hvor du har brug for at søge hjælp til, hvordan du løser en eventuel udfordring eller problemstilling, så kan du besøge værktøjskassen og finde inspiration.\n\n
+
+Husk at der altid kan forekomme situationer, hvor du er nødt til at søge hjælp hos dit studie, og sidst men ikke mindst, at du aldrig er alene om indsatsen."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/toolbutton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="ROLLEN SOM TUTORKOORDINATOR OG TUTOR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolintro" />
+
+    <LinearLayout
+        android:id="@+id/role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbutton1">
 
 
+        <Button
+            android:id="@+id/rolebutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="DIN ROLLE SOM TUTORKOORDINATOR OG TUTOR"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/role" />
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/roletextview1"
+            android:text="At være enten tutorkoordinator eller tutor handler i høj grad om at skabe et godt studiemiljø for de nye studerende, så der er plads og rum til alle. Vær opmærksom på, at du fungerer som repræsentant for Aalborg Universitet (AAU), og giv de nye studerende plads og tid til at danne deres egne indtryk af uddannelsen og underviserne.\n\n
+
+Som enten tutorkoordinator og tutor påtager du dig en række forskelligartede opgaver, og derfor skal studiestarten bygge på et gensidigt tillidsforhold mellem dig og de nye studerende.\n\n
+
+I denne værktøjskasse vil du finde en række forskellige redskaber, som kan støtte dig i din tid som tutorkoordinator og tutor. Hvad end du er ny i rollen eller en af de mere garvede, så er der hjælp at hente i værktøjskassen, såfremt du befinder dig i en situation, hvor du har behov for et opslagsværk.  "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rolebutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/rolebutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="HVILKE DATOER SKAL DU VÆRE OPMÆRKSOM PÅ?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roletextview1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/roletextview2"
+            android:text="AAU Studie- og trivselsvejledning udsender invitation til alle tutorkoordinatorer til tutorkoordinatoruddannelse med tilhørende link til e-læringsforløb \n
+Tutorkoordinatorer skal gennemføre e-læringsforløb inden tutorkoordinatoruddannelse \n
+Tutorkoordinatoruddannelse afholdes lørdag den 24. april 2021 \n
+Alle tutorer skal være på plads tirsdag den 1. juni 2021\n
+AAU Studie- og trivselsvejledning udsender invitation til alle tutorkoordinatorer og tutorer til tutorseminar med tilhørende link til e-læringsforløb \n
+Tutorer skal gennemføre e-læringsforløb inden tutorseminar – for de tutorer, der kommer til efter tutorseminaret, skal tutorkoordinatorerne sikre, at de gennemfører e-læringsforløbet inden studiestart \n
+Tutorseminar afholdes lørdag den 3. juli 2021 \n
+Studiestart afholdes onsdag den 1. september 2021  \n
+AAU Studie- og trivselsvejledning indkalder til tutorkoordinatorer og tutorer til et evalueringsmøde medio oktober 2021"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rolebutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/toolbutton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="REKRUTTERING, ANSÆTTELSE OG SAMMENSÆTNING AF TEAM"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/role" />
+
+    <LinearLayout
+        android:id="@+id/recruit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbutton2">
+
+        <Button
+            android:id="@+id/recruitbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="1. ANSØGNINGSPROCESSEN"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruit" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/recruittextview1"
+            android:text="Når du har fået jobbet som tutorkoordinator er din første opgave at få samlet et tutorkorps. I dette afsnit kan du læse om, hvordan du som tutorkoordinator faciliterer rekruttering og ansættelse af dit tutorkorps, samt nogle gode råd til sammensætning af dit studiestartsteam – særligt med fokus på samarbejdspartnere.  \n\n
+
+Det første du som tutorkoordinator skal gøre, når du skal ud at rekruttere tutorer, er at henvende dig til dit studie. Typisk skal du have fat i studienævnsformanden. Denne person kan fortælle dig om, hvilke retningslinjer der er på dit studie, og om der er nogle faste procedurer, du skal overholde. Hvis ikke dette er tilfældet, skal du selv sørge for at udforme et stillingsopslag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruitbutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/recruitbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="2. REKRUTTERINGSSAMTALEN"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruittextview1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/recruittextview2"
+            android:text="Når du har modtaget ansøgningerne og ansøgningsfristen er overskredet, skal du nu til at planlægge tutorsamtalerne. Det er her vigtigt at være forberedt, så du som tutorkoordinator skaber en god, rar og professionel stemning under samtalen. Det er en god idé at have variation i de spørgsmål, som du stiller til samtalen – så de både afspejler det faglige og sociale aspekt. Til samtalerne er det ydermere vigtigt at få sat ord på, hvad du som tutorkoordinator forventer af en kommende tutor. Der sker nemlig ofte det, at man som tutor ikke helt ved, hvad man går ind til – ofte tror nye tutorer, at det kun er sjov og spas."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruitbutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/recruitbutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="3. UDVÆLGELSESPROCESSEN"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruittextview2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/recruittextview3"
+            android:text="Når du har afholdt samtalerne, skal du have valgt de rigtige tutorer. Dette kan være en svær beslutning, og derfor kræver det, at man overvejer mange forskellige aspekter. Det er en god ide at vælge tutorer, hvor der både er diversitet i forhold til uddannelsesniveau, køn, alder, erfaring og ikke mindst personlighed. Når du har udvalgt dit tutorkorps, skal du have fortalt de studerende, at netop de er blevet valgt. Dette kan gøres på mange forskellige måder - både via mail, telefon eller ved at sende en personlig videohilsen. Det eneste man skal være opmærksom på er, at den tone man sætter i starten af ansættelsen, typisk er den, som bliver videreført til resten af samarbejdet.  "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruitbutton3"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/recruitbutton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="4. INTRODUCERING TIL TUTORKORPSET"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruittextview3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/recruittextview4"
+            android:text="Du har nu ansat dit tutorkorps, og I er bare helt klar til at komme i gang med planlægningen af studiestarten. Men før I når til det punkt, er det vigtigt at få lagt en god grobund for det kommende arbejde. Det kan være, at der både er nye og tidligere tutorer i dit korps, og disse skal alle klædes lige godt på til studiestarten. Derfor er det vigtigt at få etableret en form for oplæring, hvor alle bliver informeret om, hvad det at være tutor indebærer. Her står du som tutorkoordinator ikke alene, da AAU tilbyder både tutorkoordinatoruddannelse, tutorseminar og en håndfuld digitale værktøjer."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruitbutton4"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/recruitbutton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="GODE RÅD TIL SAMMENSÆTNINGEN AF DIT STUDIESTARTSTEAM"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruittextview4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/recruittextview5"
+            android:text="Som tidligere nævnt er det en vigtig præmis, at dit tutorkorps består af en stor del diversitet. Dette er en vigtig del, da det sikrer, at tutorkorpset rummer mange forskellige kompetencer og dermed kan varetage en bred vifte af opgaver og situationer i løbet af studiestarten. Men det er dog ikke kun vigtigt at have styr på, at tutorkorpset indeholder, det som man skal bruge i studiestarten. Det er nemlig essentielt, at du får skabt et studiestartsteam, som både indeholder repræsentanter fra dit studie, tutorer, samarbejdspartnere og personale fra AAU.\n\n
+
+Nedenfor ses en liste over hvilke personer, som kan være vigtige at have med i sit studiestartsteam: \n\n
+
+Studienævnsformand \n
+Semesterkoordinatorer \n
+Sekretærer \n
+Den økonomiansvarlige på dit studie \n
+Studenterstudievejlederen \n
+En repræsentant fra Studenterrådet \n
+En repræsentant fra Studentersamfundet \n
+En repræsentant fra den fredagsbar, som dit studie er tilknyttet \n
+A-kasser og fagforeninger \n
+En lille note omkring det at indgå et samarbejde med en a-kasse eller en fagforening: \n\n
+
+Når i skal indgå et samarbejde med ovenstående, er det vigtigt at huske på, at a-kasserne og fagforeningerne bruger jer som en marketingsmulighed. Derfor er de villige til at hjælpe jer rigtig meget, men det er essentielt at huske på, at det er jer som bestemmer og sætter præmisserne for samarbejdet. Som tutorkoordinator skal du undersøge om dit studie har nogle regler for, hvilke præmisser der må indgås aftaler på – så du ikke overtræder studiets gældende aftaler. Dette skal drøftes med studienævnsformanden på dit studie. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recruitbutton5"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/toolbutton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="KONFLIKTHÅNDTERING"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recruit" />
+
+    <LinearLayout
+        android:id="@+id/conflict"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbutton3">
+
+    <Button
+        android:id="@+id/conflictbutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="HVORFOR ER KONFLIKTHÅNDTERING EN VIGTIG KOMPETENCE SOM TUTORKOORDINATOR?"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflict" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/conflicttextview1"
+        android:text="Som tutorkoordinator eller tutor kan du havne i situationer, hvor du skal agere førstehjælper og får brug for kompetencer inden for konflikthåndtering og krisekommunikation. Det kan eksempelvis være at hjælpe studerende, som føler sig krænket, eller det kan være, at der opstår en intern konflikt i tutorteamet. Herunder kan du læse mere om, hvad der sker, når vi enten selv eller andre reagerer meget stærkt følelsesmæssigt og samtidig få tips og tricks til at få løst konflikten. "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflictbutton1"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/conflictbutton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="HVORDAN KAN DU BIDRAGE TIL AT UNDGÅ KONFLIKTER INTERNT I TUTORTEAMET?"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflicttextview1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/conflicttextview2"
+        android:text="Et godt grundlag for at undgå konflikter er at få skabt et godt socialt miljø i tutorteamet. Som tutorkoordinator er det derfor vigtigt, at du bidrager til at skabe en god holdånd og base i tutorteamet gennem fx teambuilding øvelser.  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflictbutton2"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/conflictbutton3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="HVAD GØR DU, NÅR KONFLIKTEN ER OPSTÅET?"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflicttextview2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/conflicttextview3"
+        android:text="Befinder du dig eller andre i en konfliktfyldt situation, så er det som udgangspunkt vigtigt, at du agerer professionelt og finder din mest diplomatiske side frem. Du behøver ikke at være enig med alles holdninger til alt, men det er vigtigt, at i respekterer hinanden. \n\n
+
+Herefter er det vigtigt at huske på, at konflikter skal mødes i det fælles rum og ikke dyrkes i adskilte lejre, idet denne tilgang kun leder til, at konflikten vokser, og ressourcer bliver brugt til at lufte frustrationer.\n\n
+
+Du kan med fordel se konflikten i et procesperspektiv. Kig derfor på, hvad ’symptomerne’ er på konflikten:\n\n
+
+Uenighed uden konstruktive alternativer\n
+Der postuleres i stedet for at argumentere\n
+Medlemmerne beskylder hinanden for at have manglende forståelse – eller have misforstået\n
+Medlemmerne danner klikker\n
+Medlemmerne bagtaler hinanden\n
+Medlemmerne går i forsvar/angreb position\n
+Herefter kan du kigge på, hvem der kender til symptomerne, hvilken type konflikt der er tale om, hvor langt den er kommet mv. Herefter kan du vende blikket mod, hvordan der kan tages hul på konflikten, og hvordan den kan håndteres og sidst, men ikke mindst, hvordan det sikres, at der følges op på konflikten.\n\n
+
+Et forslag til en konfliktnedtrapning kan derfor være:\n\n
+
+Oplys – giv tid, ingen overraskelsesangreb\n
+Forbered – reflektér, og adskil sag og person\n
+Gør status – den enkeltes oplevelse skal frem i lyset\n
+Afsøg åbninger – med en anerkendende tilgang\n
+Kortlæg løsningsmuligheder – alle er kilder til løsninger, alle tager medansvar\n
+Følg konflikten op og ud – juster aftaler, forvent det bedste, evaluér\n
+Som tutorkoordinator eller tutor kan du være med til at tage det første tryk af den konfliktfyldte ballon ved fx at:\n\n
+
+Spørge ind til\n
+Rose og opmuntre andre\n
+Støtte andre til at blive hørt\n
+Sætte sig i andres sted\n
+Følge og støtte idéer\n
+Tilkendegive ændret holdning\n
+Udvise åbenhed\n
+Have styr på de beslutninger, der er taget\n
+Samtidig er det vigtigt at understrege, at du aldrig er alene i din rolle som enten tutorkoordinator eller tutor. Befinder du dig derfor i en situation, hvor du vurderer, at du har brug for hjælp til at løse en konflikt, så tøv ikke med at tage kontakt til AAU Studie- og trivselsvejledning.\n\n
+
+Læs videre herunder, hvor du får tips og tricks til, hvem du ellers kan kontakte, hvis du befinder dig i en situation, hvor du har brug for hjælp. "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflictbutton3"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/toolbutton4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="HVEM SKAL JEG GÅ TIL, NÅR JEG (...)?"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/conflict" />
+
+    <LinearLayout
+        android:id="@+id/who"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbutton4">
+
+    <Button
+        android:id="@+id/whobutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="DET ER HELT NORMALT AT HAVE SPØRGSMÅL!"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/who" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/whotextview1"
+        android:text="Som tutorkoordinator eller tutor har du sikkert en masse spørgsmål, du gerne vil have svar på, og som nævnt i ovenstående, så er du aldrig alene i din rolle. AAU Studie- og trivselsvejledning har derfor samlet nogle spørgsmål samt tips og tricks herunder, som vi håber, kan skabe større klarhed omkring den studiestart, som nærmer sig med hastige skridt, samt om de forskellige retningslinjer, der skal indarbejdes i jeres planlægning af rusperiode – husk, at det er ok at bede om en hånd, hvis du befinder dig i en situation, hvor du har brug for hjælp. Som nævnt i ovenstående, så er du aldrig alene i din rolle som enten tutorkoordinator eller tutor.  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/whobutton1"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+        <Button
+            android:id="@+id/whobutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="SKAL HAVE GODKENDT STUDIESTARTSPROGRAMMET?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview2"
+            android:text="Du skal kontakte enten din studiesekretær eller studienævnsformand - det afhænger af, hvem den tutorindsatsansvarlige fra dit studie er. Er du i tvivl om, hvem du skal kontakte, så kontakt vedkommende, som ansatte dig."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="HAR SPØRGSMÅL TIL STUDIESTARTSDAGENS FORLØB?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview3"
+            android:text="Spørg den tutorindsatsansvarlige på dit studie eller tjek her i tutor appen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton3"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="ER HAVNET I EN KONFLIKTFYLDT SITUATION?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview4"
+            android:text="Start med at orientere dig i her i “Værktøjskassen” under “Konflikthåndtering” - finder du ikke her, det du har brug for, så kan du kontakte AAU Studie- og trivselsvejledning. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton4"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="ER I TVIVL OM ALKOHOLPOLITIKKEN?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview5"
+            android:text="I forbindelse med studiestarten 2021, vil der ikke kommer nogen officielle politikker fra AAU omkring alkohol. Derfor kan I som udgangspunkt planlægge aktiviteter, som I gjorde før covid-19, med de nationale restriktioner, der eventuelt måtte være. Der kan dog være enkelte lokale forskelle i studiemiljøerne, og derfor skal du kontakte den tutorindsatsansvarlige på dit studie for at høre nærmere. \n\n
+
+Vi opfordrer stadig til, at alle aktiviteterne er inkluderende. Mange studerende drikker ikke nødvendigvis alkohol, men skal stadig føle sig velkomne og trygge ved at deltage i aktiviteterne. Derfor, hvis der er aktiviteter, hvor der indgår alkohol, skal der også være alkoholfrie aktiviteter."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton5"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="ER I TVIVL OM, HVEM DEN TUTORINDSATSANSVARLIGE ER?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview6"
+            android:text="Den tutorindsatsansvarlige kan være enten studiesekretær, studiestartskoordinator eller studienævnsformand.  "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton6"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="HAR EN STUDERENDE, SOM ER BLEVET KRÆNKET?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview6" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview7"
+            android:text="AAU Studie- og trivselsvejledning er dét centrale sted på Aalborg Universitet, der håndterer henvendelser fra studerende, der er blevet udsat for krænkende adfærd, eller som har været vidne dertil. Som tutorkoordinator eller tutor er du derimod ofte den de nye studerende kontakter, da de føler en tryghed hos dig. Derfor er nærværende samtalekort udviklet til at støtte dig i en samtale med en krænket studerende. Dog er det ikke alene dit ansvar at sørge for, at de nye studerende har det godt. Orientér dig evt. på Hjælp til krænkede studerende eller kontakt AAU Studie- og trivselsvejledning. Nogle studier har et ”trivselsteam” ifm. studiestartsperioden - undersøg evt. hvem på studiet du kan gå til, hvis du er i tvivl om, hvordan du skal håndtere en konkret svær situation."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton7"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/whobutton8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="HAR EN STUDERENDE, SOM HAR OVERVEJET SELVMORD?"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whotextview7" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/whotextview8"
+            android:text="Her træder din oplysningspligt i kraft, fordi du får kendskab til eller har grund til at antage, at en eller flere personer har brug for særlig støtte eller hjælp. Modtager du en henvendelse fra en studerende, som enten er blevet krænket eller har selvmordstanker, skal vedkommende henvises til AAU Studie- og trivselsvejledning. Du kan finde den generelle studie- og trivselsvejledning på både campus Aalborg, Esbjerg og København. "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whobutton8"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/toolbutton5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="BILAG OG HJÆLPEMIDLER"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/who" />
+
+    <LinearLayout
+        android:id="@+id/bilag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbutton5">
+
+    <Button
+        android:id="@+id/bilagbutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="SKAB DET BEDSTE UDGANGSPUNKT FOR DIT TUTORKORPS"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bilag" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/bilagtextview1"
+        android:text="@string/bilag1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bilagbutton1"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/bilagbutton2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="SKABELON TIL BUDGETLÆGNING"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bilagtextview1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/bilagtextview2"
+        android:text="@string/bilag2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bilagbutton2"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

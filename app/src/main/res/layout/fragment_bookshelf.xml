@@ -1,11 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Bookshelf">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Den digitale bogreol"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/bookintro"
+        android:text="Som tutor eller toturkoordinator har du mange roller og kasketter, du skal navigere mellem. I sidemenuen finder du et overblik over disse forskellige roller, og hvad de hver især indebærer og omhandler.\n\n
+
+Hvordan træder du for eksempel ind i rollen som den professionelle tutor, eller hvordan skaber du en stærk sense of belonging som fællesskaberen? Læs mere om de fire roller, og bliv klogere på tutorens fremstilling og egenskaber."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/bookbutton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:drawableBottom="@drawable/ic_showmore"
+        android:text="Den professionelle tutor"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookintro" />
+
+    <LinearLayout
+        android:id="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookbutton1">
+
+    <!-- see https://github.com/PierfrancescoSoffritti/android-youtube-player -->
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bookyoutube1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bookbutton1"
+        app:videoId="1ROCN6VKPkk"
+        app:autoPlay="false"
+        />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/booktextview1"
+            android:text="Du har som tutor påtaget dig et stort ansvar og er formentlig gået ind i rollen med et ønske om at hjælpe andre. En af grundene til, at det er et stort ansvar skyldes, at du som tutor repræsenterer Aalborg Universitet.\n\n
+Du vil få stor indflydelse på, hvordan de nye studerende føler sig til rette. Derfor vil der også være en del forventninger til dig - både fra universitetet og fra de nye studerende. Forventningerne er bl.a. at afhjælpe de studerende i overgangen fra gymnasiet til universitetet - ikke kun socialt, men i høj grad også i forhold til at lette præstationspresset ved at skabe tryghed og sikkerhed og dermed være en livline for den nye studerende.\n\n
+Som tutor står du også til rådighed for at lytte, støtte og imødekomme de nye studerende - samt have en respekt for de usikkerheder, der følger med det at starte et nyt sted. Det handler derfor om at være den gode vært.\n\n
+Samtidig er tutoren i høj grad bannerfører og kaptajn for de nye studerende. Du betragtes derfor som en voksen og moden studerende på AAU. Den professionelle tutor går derfor foran ift. at vise god adfærd og understøtte en god social studiekultur. Det kan være alt fra, hvilke bøger der skal købes, at finde rundt på campus, at komme til undervisningen, gode råd om eksamen, men også mere generelt om studielivet - herunder hvor meget forberedelse man kan forvente at bruge som studerende. Det kan som ny studerende være mange ting at skulle forholde sig til, når man starter på universitetet. Hjælp derfor de nye studerende ved at fortælle om den usikkerhed og tvivl, der også var der, da du startede på universitetet. Ved at være ærlig og sætte gang i en snak om, hvor forvirrende studiestart på universitet kan virke, kan du bidrage til at skabe tryghed og motivation."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookyoutube1"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
 
 
-</FrameLayout>
+    <Button
+        android:id="@+id/bookbutton2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Fællesskaberen og eventmageren"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pro" />
+
+    <LinearLayout
+        android:id="@+id/eventmaker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookbutton2">
+
+        <!-- see https://github.com/PierfrancescoSoffritti/android-youtube-player -->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookyoutube2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookbutton2"
+            app:videoId="NAVso600P70"
+            app:autoPlay="false"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/booktextview2"
+            android:text="Hvilken slags tutor er du, og hvordan vil du tage imod de nye studerende? Som tutor har du et ansvar for at skabe en sense of belonging hos de nye studerende. Det betyder bl.a., at du som tutor skal planlægge aktiviteter, som alle kan deltage i. Derfor skal du være særlig opmærksom på, om der fx er studerende, der føler sig marginaliseret.\n\n
+Hør Line Randa fra AAU Karriere fortælle om arbejdsadfærd, og hvordan din adfærd påvirker den måde, som du går til de nye studerende på."
+        app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookyoutube2"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bookbutton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Førstehjælperen"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventmaker" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/booktextview3"
+            android:text="Som tutor vil du møde nye studerende, der endnu ikke fået skabt sig en omgangskreds eller kender Aalborg som studieby. Dette kan betyde, at de nye studerende kan føle sig ensomme, og det kan være svært at finde fodfæste, når man er på ukendt grund. Derfor kan du som tutor hjælpe de nye studerende med at afkode uskrevne regler og normalisere disse følelser.\n\n
+
+Som tutor kan du samtidig havne i situationer, hvor du skal agere førstehjælper og får brug for kompetencer inden for konflikthåndtering og krisekommunikation. Det kan eksempelvis være at hjælpe studerende, som føler sig krænket."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookbutton3"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            />
+
+
+    <Button
+        android:id="@+id/bookbutton4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Studiestarteren"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/booktextview3" />
+
+    <LinearLayout
+        android:id="@+id/starter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bookbutton4">
+
+        <!-- see https://github.com/PierfrancescoSoffritti/android-youtube-player -->
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bookyoutube3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookbutton4"
+            app:videoId="vGN2bJC9IuU"
+            app:autoPlay="false"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/booktextview4"
+            android:text="Hvordan hjælper du bedst de nye studerende godt i gang med deres studietid?\n\n
+
+Mange af de nye studerende kommer direkte fra gymnasiet til universitet, og der er meget nyt at forholde sig til, når de starter. Pludselig skal man selv planlægge sin læsning og skriveprocesser, og man står i høj grad på egne ben. Hør Astrid Springborg, studenterstudievejleder på AAU, fortælle om, hvordan du som tutor kan hjælpe de nye studerende godt på vej ved eksempelvis at anerkende de følelser og oplevelser, som de gennemgår som nye studerende."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bookyoutube3"
+            android:textColor="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,15 +2,9 @@
     <string name="app_name">Tutor Appen</string>
     <string name="page_title" />
 
-    <string name="expandable_text">We Sanchhaya Education Pvt. Ltd., are registered and headquartered
-        at BC 227, 2nd Floor, Matrix Business Tower, B4, Sector 132, Noida, UP-201301, hereinafter
-        referred to as GeeksforGeeks. We also offer paid Courses managed by Sanchhaya Classes Pvt. Ltd.
-        with registered office address B-142, Vishwash Park, Uttam Nagar, New Delhi, North Delhi, Delhi, India, 110059.
-        At GeeksforGeeks, we value your trust and  respect your privacy. This privacy statement (“Privacy Statement”)
-        applies to the treatment of personally identifiable information submitted by, or otherwise obtained from,
-        you in connection with the associated application (“Application”). The Application is
-        provided by GeeksforGeeks (and may be provided by Geeksforgeeks on behalf
-        of a GeeksforGeeks licensor or partner (“Application Partner”).
-        By using or otherwise accessing the Application, you acknowledge that you accept the practices
-        and policies outlined in this Privacy Statement.</string>
+    <string name="bilag1">Som tutorkoordinator har du et ansvar for, at dit tutorkorps føler sig velinformeret og godt klædt på til at varetage opgaven som tutor på Aalborg Universitet. Til det kommende tutorseminar vil der blive sat tid af til at starte ”uddannelsen” af netop dit korps. Dette kommer til at ske i form af nogle workshops på dagen. Forud for disse vil du blive præsenteret for en skabelon for, hvad du kunne tale med dit korps om for at sikre det bedste udgangspunkt for det kommende tutorarbejde. Skabelonen indeholder spørgsmål, som gerne skulle føre til en dialog, gode råd og eksempler samt forskellige dilemmaer, som kan drøftes.\n\n
+    <a href="https://www.tutor.aau.dk/digitalAssets/1156/1156508_skab-det-bedste-udgangspunkt-for-dit-tutorkorps.pdf">Du kan finde skabelonen her</a></string>
+
+    <string name="bilag2">Mangler du inspiration til budgetlægning? Så kan du hente denne overskuelige skabelon, som gør det lettere for dig at holde styr på alle udgifter og indtægter.\n\n
+    Hent skabelonen<a href="https://www.tutor.aau.dk/digitalAssets/997/997108_budget_skabelon.xlsx"> som excelark her</a> eller <a href="https://www.tutor.aau.dk/digitalAssets/997/997206_budget_skabelon.pdf">som PDF her.</a></string>
 </resources>

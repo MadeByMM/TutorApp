@@ -7,58 +7,132 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Events#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class Events extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Events() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Events.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Events newInstance(String param1, String param2) {
-        Events fragment = new Events();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_events, container, false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_events, null);
+
+        Button eventsbutton1 = root.findViewById(R.id.eventsbutton1);
+        eventsbutton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.faglige).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.faglige).setVisibility(View.VISIBLE);
+                    eventsbutton1.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.faglige).setVisibility(View.GONE);
+                    eventsbutton1.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        Button fagligebutton1 = root.findViewById(R.id.fagligebutton1);
+        fagligebutton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.fagligetextview1).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.fagligetextview1).setVisibility(View.VISIBLE);
+                    fagligebutton1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.fagligetextview1).setVisibility(View.GONE);
+                    fagligebutton1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+        Button fagligebutton2 = root.findViewById(R.id.fagligebutton2);
+        fagligebutton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.fagligetextview2).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.fagligetextview2).setVisibility(View.VISIBLE);
+                    fagligebutton2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.fagligetextview2).setVisibility(View.GONE);
+                    fagligebutton2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+        Button fagligebutton3 = root.findViewById(R.id.fagligebutton3);
+        fagligebutton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.fagligetextview3).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.fagligetextview3).setVisibility(View.VISIBLE);
+                    fagligebutton3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.fagligetextview3).setVisibility(View.GONE);
+                    fagligebutton3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+        Button fagligebutton4 = root.findViewById(R.id.fagligebutton4);
+        fagligebutton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.fagligetextview4).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.fagligetextview4).setVisibility(View.VISIBLE);
+                    fagligebutton4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.fagligetextview4).setVisibility(View.GONE);
+                    fagligebutton4.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+        Button fagligebutton5 = root.findViewById(R.id.fagligebutton5);
+        fagligebutton5.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.fagligetextview5).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.fagligetextview5).setVisibility(View.VISIBLE);
+                    fagligebutton5.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.fagligetextview5).setVisibility(View.GONE);
+                    fagligebutton5.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+
+        Button eventsbutton2 = root.findViewById(R.id.eventsbutton2);
+        eventsbutton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.social).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.social).setVisibility(View.VISIBLE);
+                    eventsbutton2.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.social).setVisibility(View.GONE);
+                    eventsbutton2.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        Button socialbutton1 = root.findViewById(R.id.socialbutton1);
+        socialbutton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.socialtextview1).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.socialtextview1).setVisibility(View.VISIBLE);
+                    socialbutton1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_shrink, 0, 0, 0);
+                } else {
+                    root.findViewById(R.id.socialtextview1).setVisibility(View.GONE);
+                    socialbutton1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_expand, 0, 0, 0);
+                }
+            }
+        });
+
+        return root;
     }
 }

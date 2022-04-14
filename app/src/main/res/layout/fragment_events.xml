@@ -1,11 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Events">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Event Børsen"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/eventsintro"
+        android:text="Her forsynes I med en event-børs, hvor I kan hente inspiration til de nye studerendes studiestart. Mens nogle arrangementer har det faglige fokus, har andre det sociale, men de fleste kan gøres til en kombination, når der gives plads til at vinkle legen til jeres specifikke studies fagområder.\n\n
+
+Mange af arrangementerne lægger op til at I kan mødes efter forelæsning. Det gør det lettere for de nye studerende at komme afsted til arrangementerne og det kræver ikke, at de studerende sætter en hel dag af til arrangementet. Til gengæld er der garanti for gode grin, samarbejde og minder for livet.\n\n
+
+I en tid hvor vi skal tage ekstra meget hensyn til hinanden og ikke må være for mange samlet, har vi desuden inkluderet idéer til hvilke events der kan foregå udendørs og/eller digitalt, således i kan medtænke det i jeres planlægningsproces"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:textColor="@color/colorPrimary"
+        />
 
 
-</FrameLayout>
+    <Button
+        android:id="@+id/eventsbutton1"
+        android:layout_marginTop="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="De faglige aktiviteter"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventsintro" />
+
+    <LinearLayout
+        android:id="@+id/faglige"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventsbutton1">
+
+        <Button
+            android:id="@+id/fagligebutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Guide på AUB"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/faglige" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fagligetextview1"
+            android:text="Til dette arrangement er det en god idé at alliere sig med en af de venlige medarbejdere på Aalborg Universitetsbibliotek – de vil helt sikkert gerne være behjælpelige med både fysisk guide på AUB og så selvfølgelig den virtuelle gennemgang."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/fagligebutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="MØD DIN VEJLEDER-DAG (DIGITALT)"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fagligetextview2"
+            android:text="Mød din vejleder-dag skal laves i samarbejde med studiets vejleder, der får mulighed for at præsentere sig selv, og der bliver lejlighed til at stille spørgsmål til studiets opbygning, udfordringer og muligheder.\n\n
+
+På den måde får den studerende indblik i, hvad vejlederen kan hjælpe med, ligesom vejlederen får mulighed for at vise, at vedkommende er tilgængelig til de mere sårbare dele af studieforløbet – og af studiestarten. Det er derfor også en ideel mulighed for at adressere de udfordringer, der kan være ved at starte på et nyt studie, møde en masse nye mennesker og konstant få en masse nye indtryk.\n\n
+
+Derudover kan det være en god idé at skabe afslappende rammer om arrangementet, således de nye studerende føler sig trygge ved at benytte vejlederen fremadrettet."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/fagligebutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="OPSÆTNING AF IT (I SAMARBEJDE MED ITS)"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fagligetextview3"
+            android:text="Når der starter et nyt hold studerende, starter der samtidig et hold af studerende, der skal lære at begå sig på Moodle, Stads Selvbetjening, Digital Eksamen – og hvad der ellers hører sig til af ’lokale’ hjemmesider ved studierne. På de kreative studier kan det også være indblik i nødvendige programmer som InDesign, Photoshop – eller noget helt tredje.\n\n
+
+Derudover skal de studerende også lære at bruge universitets fysiske faciliteter, herunder eksempelvis printerne, hvor de nye studerende kan få en introduktion til at printe, scanne, kopiere og ikke mindst hvordan man tilkøber ekstra units.\n\n
+
+Udnyt lejligheden til at byde på god frokost, en lækker kage og giv så de studerende det bedste indblik i (den tekniske del af) gangen på Aalborg Universitet!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton3"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/fagligebutton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="ORGANISATIONSDAG"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fagligetextview4"
+            android:text="Udover at introducere de nye studerende til IT-systemer, campus og vejleder, er det også en god idé at introducere dem til alle de relevante organisationer, der er tilknyttet studiet. Det kan være a-kassen, fagforeningen, den sociale forening – eller noget helt fjerde som de mere garvede studerende af erfaring ved, at de får brug for at kende til!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton4"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/fagligebutton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="PRØVE-EKSAMEN"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/fagligetextview5"
+            android:text="Som ny studerende kan det virke angstprovokerende at skulle til sin første eksamen på universitetet. Som tutorer kan i med fordel afholde en form for prøve-eksamen, hvor i giver de nye studerende indsigt i, hvordan gruppeeksamenerne på AAU foregår, og hvad i kan give dem af tips og tricks til forberedelsen.\n\n
+
+På den måde kan i forhåbentlig fjerne den værste nervøsitet, og skabe større tryghed for de nye studerende."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fagligebutton5"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/eventsbutton2"
+        android:layout_marginTop="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="De sociale aktiviteter"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faglige" />
+
+    <LinearLayout
+        android:id="@+id/social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eventsbutton2">
+
+    <Button
+        android:id="@+id/socialbutton1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="BINKO BANKO (UDENDØRS ELLER DIGITALT)"
+        android:drawableLeft="@drawable/ic_expand"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/social" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/socialtextview1"
+        android:text="Banko er blevet in igen, men det forstår man jo også godt, når det kombinerer spændingen, socialt samvær og gode præmier i én!\n\n
+
+I skal bruge…\n\n
+
+Bankoplader og numrene fra 1-99\n
+Gode præmier\n\n
+Til dette arrangement kan I eventuelt alliere jer med studieforeningen – for måske har de gode samarbejdsaftaler, eller måske kan de donere en præmie til en af vinderne. Derudover kan I jo søge jer frem til en hjemmeside, der både kan være behjælpelige med bankoplader og numrene."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/socialbutton1"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/socialbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="HÆKLE- OG STRIKKEKLUB (DIGITALT)"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/social" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/socialtextview2"
+            android:text="De fleste af os kan konstatere, at det igen er blevet moderne at være selvforsynende, hvad angår strikketøj, karklude og pyntede nøgleringe. Det er dermed også en god mulighed for en stille stund med strikketøjet og en kop varm kaffe eller the.\n\n
+
+I skal bruge…\n\n
+
+Strikke- eller hækleglade studerende\n
+Strikke- og hæklenåle og en masse garn\n\n
+Det kan enten være, at en af tutorerne er gode til at lære fra sig, hvad angår denne kreative kunst – ellers kan det være, en af de nye studerende har mod på at lære nybegynderne om de basale ’regler’ indenfor hækle- og strikkekunst.\n\n
+
+Hvad angår nåle og garn, har de strikke- og hækleglade studerende sikkert et lager fyldt med små rester af garn, de ikke har fået brugt, og det kan nybegynderne jo få lov at øve sig på."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/socialbutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

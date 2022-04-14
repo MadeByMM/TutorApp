@@ -7,58 +7,79 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Bookshelf#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Bookshelf extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     public Bookshelf() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Bookshelf.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Bookshelf newInstance(String param1, String param2) {
-        Bookshelf fragment = new Bookshelf();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bookshelf, container, false);
+
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_bookshelf, null);
+
+        Button bookbutton1 = root.findViewById(R.id.bookbutton1);
+        bookbutton1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.pro).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.pro).setVisibility(View.VISIBLE);
+                    bookbutton1.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.pro).setVisibility(View.GONE);
+                    bookbutton1.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        Button bookbutton2 = root.findViewById(R.id.bookbutton2);
+        bookbutton2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.eventmaker).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.eventmaker).setVisibility(View.VISIBLE);
+                    bookbutton2.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.eventmaker).setVisibility(View.GONE);
+                    bookbutton2.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        Button bookbutton3 = root.findViewById(R.id.bookbutton3);
+        bookbutton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.booktextview3).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.booktextview3).setVisibility(View.VISIBLE);
+                    bookbutton3.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.booktextview3).setVisibility(View.GONE);
+                    bookbutton3.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        Button bookbutton4 = root.findViewById(R.id.bookbutton4);
+        bookbutton4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                if (root.findViewById(R.id.starter).getVisibility() == View.GONE) {
+                    root.findViewById(R.id.starter).setVisibility(View.VISIBLE);
+                    bookbutton4.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showless);
+                } else {
+                    root.findViewById(R.id.starter).setVisibility(View.GONE);
+                    bookbutton4.setCompoundDrawablesWithIntrinsicBounds(0, 0,0,R.drawable.ic_showmore);
+                }
+            }
+        });
+
+        return root;
     }
 }

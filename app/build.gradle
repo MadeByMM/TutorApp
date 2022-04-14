@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
 }
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk 32
@@ -40,6 +41,11 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.3.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation 'com.ms-square:expandableTextView:0.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+    implementation 'com.github.draxdave:ConstraintAccordion:1.0.7'
+    implementation "androidx.core:core-ktx:1.7.0"
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1'
 
 }

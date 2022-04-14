@@ -1,37 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:animateLayoutChanges="true"
-    tools:context=".Home">
+    android:layout_height="match_parent">
 
-    <com.ms.square.android.expandabletextview.ExpandableTextView
-        android:id="@+id/expand_text_view"
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Yes, du er med!"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- see https://github.com/PierfrancescoSoffritti/android-youtube-player -->
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        expandableTextView:animDuration="100"
-        expandableTextView:maxCollapsedLines="5">
+        android:id="@+id/homeyoutube1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heading"
+        app:videoId="xyPU0UqNDXQ"
+        app:autoPlay="false"
+        />
 
-        <!-- simple text view  -->
-        <TextView
-            android:id="@id/expandable_text"
+
+    <Button
+        android:id="@+id/homebutton2"
+        android:layout_marginTop="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Nyheder og begivenheder"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeyoutube1" />
+
+    <LinearLayout
+        android:id="@+id/news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homebutton2">
+
+        <Button
+            android:id="@+id/newsbutton1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textColor="#666666"
-            android:textSize="16sp" />
+            android:background="#FFFFFF"
+            android:text="Tutorkoordinatoruddannelsen 2022"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news" />
 
-        <!-- expandable ImageButton -->
-        <ImageButton
-            android:id="@id/expand_collapse"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|bottom"
-            android:background="@android:color/transparent" />
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/newstextview1"
+            android:text="” Foråret er over os, og det betyder, at AAU Studie- og trivselsvejledning snart slår dørene op til dette års tutorkoordinatoruddannelse. Sidste år måtte vi afholde uddannelsesdagen online grundet covid-19, men i år er situationen heldigvis en anden. Derfor glæder vi os over, at vi kan afholde tutorkoordinatoruddannelsen d. 23/4 kl. 09:00-16:00 i CREATE.
 
-    </com.ms.square.android.expandabletextview.ExpandableTextView>
+Vi har planlagt en spændende og lærerig dag, der byder på både oplæg og øvelser, så tutorkoordinatorerne bliver klædt godt på til at håndtere dette års studiestart!
 
-</RelativeLayout>
+Hold øje med siden her for flere informationer om tutorkoordinatoruddannelsen."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/newsbutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/homebutton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Vil du være tutor?"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news" />
+
+    <LinearLayout
+        android:id="@+id/join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homebutton1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/jointextview1"
+            android:text="Går du og drømmer om at blive tutor, men er du i tvivl om, hvordan det kan lade sig gøre? Det er forskelligt fra uddannelse til uddannelse, hvordan tutorerne udvælges. Du bør derfor kontakte din studievejleder eller studiesekretær, som kan introducere dig til, hvordan du kommer i betragtning til tutorhvervet."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/join"
+            android:textColor="@color/colorPrimary"
+            />
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/joinyoutube1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heading"
+            app:videoId="zfhH_pmUYUA"
+            app:autoPlay="false"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

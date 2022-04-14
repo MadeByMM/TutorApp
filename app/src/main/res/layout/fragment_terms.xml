@@ -1,10 +1,430 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Terms">
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="172dp"
+        android:text="Tutorbetingelser"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:id="@+id/termsintro"
+        android:text="Her finder du først og fremmest information om, hvad det egentlig vil sige, at være tutor. Hvad er dine vigtigste opgaver, og hvordan opfylder du dem?\n\n
+
+Dernæst finder du vigtig viden om de etiske aspekter af tutorbetingelserne – vidste du for eksempel godt, at du som tutor er underlagt både tavsheds- og oplysningspligt samt hvad det indebærer?\n\n
+
+Til sidst er det også vigtigt, at du sætter dig godt ind i the code of conduct for tutorer. Her finder du eksempelvis råd til, hvordan du agerer rollemodel for de nye studerende og samtidig fremstår professionel.  "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/termsbutton1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Hvad vil det sige at være tutor?"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termsintro" />
+
+
+    <TextView
+        android:id="@+id/termstextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_margin="5dp"
+        android:padding="5dp"
+        android:background="@drawable/border"
+        android:text="At være tutor handler i høj grad om at skabe et godt studiemiljø for de nye studerende, så der er plads og rum til alle. Vær opmærksom på, at I fungerer som repræsentanter for AAU, og giv de nye studerende plads og tid til at danne deres egne indtryk af uddannelsen og underviserne. Tutorrollen er desuden virkelig lærerig, og I er garanteret både nye venskaber og ikke mindst en sjov studiestartsperiode.  Som tutor påtager du dig en række forskelligartede opgaver, og derfor skal studiestarten bygge på et gensidigt tillidsforhold mellem dig og de nye studerende"
+        android:visibility="gone"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/termsbutton1" />
+
+
+    <Button
+        android:id="@+id/termsbutton2"
+        android:layout_marginTop="7dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Etik i tutorrollen"
+        android:textColor="#FFFFFF"
+        android:drawableBottom="@drawable/ic_showmore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termstextView1" />
+
+    <LinearLayout
+        android:id="@+id/ethics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termsbutton2">
+
+
+        <Button
+            android:id="@+id/ethicsbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Etik"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethics" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/ethicstextview1"
+            android:text="Som tutor har du mange forskellige kasketter på:
+
+Du er eventmageren, der skaber gode fælleskaber
+Du går forrest som den professionelle tutor, der er erfaren i studielivet og kan dele ud af din viden
+Du er førstehjælperen, der lytter og griber ind, hvis der opstår tilspidsede situationer
+Uanset hvilken en af kasketterne du har på, så handler etik om at ville bestræbe sig på at gøre det gode og rigtige for den anden. Man handler med andre ord ikke på bekostning af nogen, men netop for nogen. Man hjælper, bidrager og behandler andre med ligeværdighed og respekt – præcis som man også selv gerne vil behandles."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethicsbutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ethicsbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Tavshedspligt"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethicstextview1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/ethicstextview2"
+            android:text="Som tutor har du tavshedspligt. Det betyder helt konkret, at du ikke må videregive fortrolige oplysninger, som du får adgang til i dit hverv som tutor, til uvedkommende
+
+Det kan være oplysninger om ruslinge, medtutorer eller andre personer, du kommer i kontakt med gennem tutorgerningen."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethicsbutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/ethicsbutton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Oplysningspligt"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethicstextview2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/ethicstextview3"
+            android:text="Oplysningspligt er en personlig pligt, der gælder både for fagpersoner og den almindelige borger, når man får kendskab til eller grund til at antage, at en eller flere personer har brug for særlig støtte eller hjælp. Selv om du har tavshedspligt, har du således også pligt til at råbe ’vagt i gevær’, hvis du vurderer, at der er brug for en indsats.
+
+Hvis du i regi af universitetet udsættes for fx en krænkelse eller oplever, at nogen udsættes for en krænkelse, så kan du altid henvende sig til AAU Studie- og trivselsvejledning eller til din studieledelse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ethicsbutton3"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+    </LinearLayout>
 
 
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/termsbutton3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="Code of conduct for tutorer"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ethics"
+        android:drawableBottom="@drawable/ic_showmore"/>
+
+    <LinearLayout
+        android:id="@+id/coc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/termsbutton3"
+        >
+
+        <Button
+            android:id="@+id/cocbutton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="En tutor er en rollemodel"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coc" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/coctextview1"
+            android:text="Som tutor er du en af de første repræsentanter for Aalborg Universitet, de nye studerende møder. Du har derfor rigtig stor indflydelse på, hvordan de nye studerende føler sig modtaget, finder sig til rette og især på hvordan de opfatter studiekulturen på Aalborg Universitet. Det er derfor vigtigt, at din måde at møde de studerende, de historier du fortæller og de aktiviteter du igangsætter, afspejler studiekulturen, uddannelsen og AAU på bedste vis."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton1"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="EN TUTORS OPGAVE ER AT HJÆLPE DEN NYE STUDERENDE PÅ PLADS"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/coctextview1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:id="@+id/coctextview2"
+            android:text="De nye studerende skal føle, at det er deres uddannelse. Det er vigtigt, at du har særligt fokus på studerende, der ikke kender studiebyen eller landet og ikke har et socialt netværk. Studiestartsaktiviteterne skal give de nye studerende en forståelse for uddannelsens indhold og tilrettelæggelse, og hvordan de kan sætte deres eget præg på deres uddannelsesprofil. Hjælp dem med at forstå PBL og projektarbejdet."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton2"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton3"
+            app:layout_constraintTop_toBottomOf="@id/coctextview2"
+            android:text="EN TUTOR HJÆLPER MED AT OPBYGGE OG FINDE GODE SOCIALE RELATIONER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview3"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton3"
+            android:text="Fællesskaber og gode sociale relationer er afgørende for studietrivsel. For at nye studerende skal føle sig velkomne, skal de opleve sig set; det er vigtigt, at du har kontakt til alle de nye studerende, som du er ansvarlig for. Du skaber kontakt mellem de studerende, så der kan opstå nye venskaber og du lærer de nye studerende, at de skal passe godt på hinanden. Vær opmærksom på om der er nogle af de nye studerende, der er uden for fællesskabet, og gør en ekstra indsats for at inddrage dem i de sociale aktiviteter. Du bidrager positivt til, at de nye studerende bliver opmærksom på styrken i forskellighed og opfatter den som en ressource i studiemiljøet."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton4"
+            app:layout_constraintTop_toBottomOf="@id/coctextview3"
+            android:text="EN TUTOR ER ALTID PROFESSIONEL, TAGER ANSVAR OG PASSER PÅ ALLE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview4"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton4"
+            android:text="Som tutor skal du agere professionelt; ansvarlig, imødekommende og parat til at lytte og støtte. Du skal skabe tryghed og sikkerhed, og være en god vært for studiet. Alle studiestartsaktiviteter du planlægger, skal overholde universitetets retningslinjer. Aktiviteterne skal være inkluderende og tage hensyn til forskellige overbevisninger (personlige, politiske, religiøse, kønsmæssige... m.fl.). Aktiviteterne skal også tage hensyn til forskel i økonomisk formåen.
+
+Alle aktiviteter skal som udgangspunkt være alkoholfrie. Hvis der er aktiviteter hvor alkohol indgår, skal der være alkoholfrie alternativer. Du skal sørge for at indholdet i aktiviteterne er velbeskrevet i programmet så de studerende kan være forberedte og være trygge ved at deltage.
+
+Du har et ansvar over for de andre tutorer, som er afhængige af, at du overholder aftaler og er til stede, når der er behov for det. Du har ansvar for de nye studerende, som skal mødes med respekt i al deres forskellighed. Du har selvfølgelig også ansvar over for dig selv, og du passer på, at tutoropgaverne ikke går ud over dit eget studium."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton5"
+            app:layout_constraintTop_toBottomOf="@id/coctextview4"
+            android:text="EN TUTOR SÆTTER FOKUS PÅ STUDIEINTENSITET FRA FØRSTE DAG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview5"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton5"
+            android:text="Studier ved AAU er fuldtidsstudier, og alle studerende deltager aktivt og gør deres bedste. Du hjælper studiekoordinatorerne med at tale positivt om fremmøde, fag og eksaminer.
+
+Du skal sikre, at de nye studerende ved, hvor de skal være, og har fundet frem til studiets informationer om skema og boglister, Moodle, Student Mail, AAU Student app’en, med mere."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton6"
+            app:layout_constraintTop_toBottomOf="@id/coctextview5"
+            android:text="EN TUTOR VED, AT SUCCES PÅ ET STUDIE KRÆVER, AT FAGLIGHEDEN ER I HØJSÆDET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview6"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton6"
+            android:text="Jo bedre man forbereder sig og deltager i undervisning og projektarbejde mv., jo mere lærer man - og oplevelse af læring og mestring bidrager til studieglæde og selvtillid. Du viser de nye studerende gode studievaner, så de får en god start på uddannelsen. Du kender til de nye studerendes studieordning og de organer og fora, hvor studerende kan gøre deres stemme gældende."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton7"
+            app:layout_constraintTop_toBottomOf="@id/coctextview6"
+            android:text="EN TUTOR GØR EN KÆMPE FORSKEL OG FÅR BEKENDTSKABER OG ERFARINGER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview7"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton7"
+            android:text="Som tutor lærer du nye mennesker at kende, og du får et stort netværk på universitetet og i din studieby. Du lærer at planlægge og håndtere mange forskellige situationer, og du er del af sjov, leg, læring og personlig udvikling blandt taknemmelige studerende, som sætter meget pris på din indsats. Du får også ny indsigt i dit eget fag og kan føje en væsentlig erfaring til dit CV."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/cocbutton8"
+            app:layout_constraintTop_toBottomOf="@id/coctextview7"
+            android:text="EN TUTOR INDGÅR IKKE EKSKLUSIVAFTALER MED EKSTERNE REPRÆSENTANTER"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:drawableLeft="@drawable/ic_expand"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/coctextview8"
+            app:layout_constraintTop_toBottomOf="@id/cocbutton8"
+            android:text="Du repræsenterer i rollen som tutor ikke eksterne virksomheder eller organisationer eller indgår eksklusivaftaler med sådanne. Dvs. aftaler, der mod finansiel eller anden form for støtte, lover sponsor eksklusiv adgang til arrangementer eller aktiviteter, der finder sted i forbindelse med studiestartsperioden (september/oktober), eller som pålægger tutor kun at måtte fremhæve eller introducere nye studerende for bestemte virksomheder eller organisationer."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
