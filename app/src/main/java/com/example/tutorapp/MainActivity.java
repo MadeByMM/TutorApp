@@ -22,6 +22,8 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //see https://www.section.io/engineering-education/bottom-navigation-bar-in-android/
         //Initialize Bottom Navigation View.
         BottomNavigationView navView = findViewById(R.id.bottomNav_view);
 

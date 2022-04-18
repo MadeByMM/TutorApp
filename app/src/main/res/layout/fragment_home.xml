@@ -9,7 +9,7 @@
         android:id="@+id/heading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+
         android:text="Yes, du er med!"
         android:textAllCaps="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
